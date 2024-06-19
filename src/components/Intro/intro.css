@@ -15,8 +15,11 @@
     /* left: 50rem; */
     object-fit: cover;
     /* height: 100vh; */
-    height: 75vh;
+    height: 70vh;
 
+}
+.introText{
+    font-size: 2.5rem;
 }
 .introContent{
     height: 80vh;
@@ -34,26 +37,53 @@
     font-weight: 100;
 
 }
+.dash{
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: cadetblue;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .introName{
-    color: yellow;
+    color: rgb(184, 215, 255);
 
 }
 .introPara{
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
+    margin-top: 4px;
 }
 .btn{
     background: white;
-    margin: 1rem 0;
+    margin: 1.3rem 0 1.3rem 1rem;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+    width: 140px;
+}
+a{
+    font-size: 1rem;
+
+}
+.btnContainer{
+    display: flex;
+    flex-direction: row;
 }
 .btnImg{
     object-fit: cover;
     margin: -3px 0.25rem;
     height: 1rem;
+}
+.docImg{
+    object-fit: cover;
+    margin: -3px 0.25rem;
+    height: 1rem;
+
 }
 @media screen and (max-width: 500px) {
     .bg{
