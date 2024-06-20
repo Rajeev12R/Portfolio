@@ -16,20 +16,20 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_6k928k2', 'template_1d6ek1s', form.current,{ 
+        emailjs.sendForm('service_6k928k2', 'template_1d6ek1s', form.current, {
             publicKey: 'i0TRIWekKwq4hOiri'
         })
-        .then(
-            () => {
-              console.log('SUCCESS!');
-              e.target.reset();
-              alert('Email Sent!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    e.target.reset();
+                    alert('Email Sent!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
 
     return (
@@ -55,10 +55,18 @@ const Contact = () => {
                     <textarea name="message" className="msg" cols="30" rows="10" placeholder='User Message'></textarea>
                     <button type='submit' value='Send' className="submitBtn">Submit</button>
                     <div className="links">
-                        <img src={FacebookIcon} alt="Facebook" className="link" />
-                        <img src={Twitter} alt="Twitter" className="link" />
-                        <img src={Instagram} alt="Instagram" className="link" />
-                        <img src={Youtube} alt="Youtube" className="link" />
+                        <a href="https://www.facebook.com/profile.php?id=100025735160971" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={FacebookIcon} alt="Facebook" />
+                        </a>
+                        <a href="https://x.com/RajeevR16816742" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={Twitter} alt="Twitter" />
+                        </a>
+                        <a href="https://www.instagram.com/ranjan.rajeev12/" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={Instagram} alt="Instagram" />
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={Youtube} alt="Youtube" />
+                        </a>
                     </div>
                 </form>
             </div>
