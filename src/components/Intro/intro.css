@@ -66,6 +66,10 @@
     border-radius: 2rem;
     width: 140px;
 }
+.btn:hover{
+    color: rgb(105, 164, 240);
+    cursor: pointer;
+}
 a{
     font-size: 1rem;
 
