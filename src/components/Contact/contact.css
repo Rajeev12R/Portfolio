@@ -71,11 +71,8 @@
     margin: 2rem;
     cursor: pointer;
 }
-.links{
-    display: flex;
-    flex-wrap: wrap;
-}
-.link{
+
+a img{
     object-fit: cover;
     height: 3rem;
     width: 3rem;
