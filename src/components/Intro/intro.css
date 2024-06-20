@@ -1,27 +1,30 @@
-#intro{
+:root {
+    --max-width: 75rem; /* Default max-width for larger screens */
+}
+
+#intro {
     height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 75rem;
+    max-width: var(--max-width);
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-
 }
-.bg{
+
+.bg {
     position: absolute;
     z-index: -1;
     top: 3rem;
     right: 0;
-    /* left: 50rem; */
     object-fit: cover;
-    /* height: 100vh; */
     height: 70vh;
-
 }
-.introText{
+
+.introText {
     font-size: 2.5rem;
 }
-.introContent{
+
+.introContent {
     height: 80vh;
     width: 100vw;
     padding: 2rem;
@@ -30,35 +33,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
-.hello{
+
+.hello {
     font-size: 1.75rem;
     font-weight: 100;
-
 }
-.dash{
+
+.dash {
     display: inline-block;
     animation: blink 1s infinite;
     color: cadetblue;
 }
+
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-.introName{
+.introName {
     color: rgb(184, 215, 255);
-
 }
-.introPara{
+
+.introPara {
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
     margin-top: 4px;
 }
-.btn{
+
+.btn {
     background: white;
     margin: 1.3rem 0 1.3rem 1rem;
     padding: 0.75rem 1.5rem;
@@ -66,32 +71,56 @@
     border-radius: 2rem;
     width: 140px;
 }
-.btn:hover{
+
+.btn:hover {
     color: rgb(105, 164, 240);
     cursor: pointer;
 }
-a{
-    font-size: 1rem;
 
+a {
+    font-size: 1rem;
 }
-.btnContainer{
+
+.btnContainer {
     display: flex;
     flex-direction: row;
 }
-.btnImg{
-    object-fit: cover;
-    margin: -3px 0.25rem;
-    height: 1rem;
-}
-.docImg{
-    object-fit: cover;
-    margin: -3px 0.25rem;
-    height: 1rem;
 
+.btnImg,
+.docImg {
+    object-fit: cover;
+    margin: -3px 0.25rem;
+    height: 1rem;
 }
+
 @media screen and (max-width: 500px) {
-    .bg{
-        right: -20vw;
+    :root {
+        --max-width: 100%; /* Adjust max-width for smaller screens */
     }
-    
+
+    .bg {
+        height: 30vh;
+        
+
+    }
+
+    .btnContainer {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .btn {
+        margin: 0.5rem 0 0.5rem 0; /* Adjust margins */
+        width: 140px; /* Allow button to size based on content */
+    }
+
+    .introText,
+    .hello {
+        font-size: 1.5rem; /* Adjust font sizes for smaller screens */
+    }
+
+    .introContent {
+        height: auto; /* Adjust height for content */
+        padding: 1rem; /* Adjust padding */
+        font-size: 2rem; /* Adjust font size */
+    }
 }
