@@ -7,7 +7,7 @@ import Facebook from '../../assets/facebook.png';
 import FacebookIcon from '../../assets/facebook-icon.png';
 import Instagram from '../../assets/instagram.png';
 import Twitter from '../../assets/twitter.png';
-import Youtube from '../../assets/youtube.png'
+import  Github from "../../assets/github.png";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -55,8 +55,8 @@ const Contact = () => {
                     <textarea name="message" className="msg" cols="30" rows="10" placeholder='User Message'></textarea>
                     <button type='submit' value='Send' className="submitBtn">Submit</button>
                     <div className="links">
-                        <a href="https://www.facebook.com/profile.php?id=100025735160971" target="_blank" rel="noopener noreferrer" className="link">
-                            <img src={FacebookIcon} alt="Facebook" />
+                        <a href="https://github.com/Rajeev12R" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={Github} alt="" />
                         </a>
                         <a href="https://x.com/RajeevR16816742" target="_blank" rel="noopener noreferrer" className="link">
                             <img src={Twitter} alt="Twitter" />
@@ -64,8 +64,8 @@ const Contact = () => {
                         <a href="https://www.instagram.com/ranjan.rajeev12/" target="_blank" rel="noopener noreferrer" className="link">
                             <img src={Instagram} alt="Instagram" />
                         </a>
-                        <a href="" target="_blank" rel="noopener noreferrer" className="link">
-                            <img src={Youtube} alt="Youtube" />
+                        <a href="https://www.facebook.com/profile.php?id=100025735160971" target="_blank" rel="noopener noreferrer" className="link">
+                            <img src={FacebookIcon} alt="Facebook" />
                         </a>
                     </div>
                 </form>
